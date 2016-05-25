@@ -1,0 +1,35 @@
+<div id="lecture-content">
+    <div id="lecture-content-header">
+        <div class="left">
+            <a ui-sref="person.course.lecture({lectureId:lecture.orderNum-1})" ng-show="enablePreview">
+                Предыдущая
+            </a>
+        </div>
+        <div class="right">
+            <a ui-sref="person.course.lecture({lectureId:lecture.orderNum+1})" ng-show="enableNext">
+                Следующая
+            </a>
+        </div>
+        <div class="center"><a ui-sref="person.course.content">К списку лекций</a></div>
+    </div>
+    <div class="title">{{lecture.topic}}</div>
+    <div class="content">
+        {{lecture.content}}
+        <div ng-show="lecture.links.length > 0">
+            <hr>
+            Дополнительная литература
+            <ol>
+                <li ng-repeat="link in lecture.links"><a target="_blank" href="{{link.link}}">{{link.description}}</a>
+                </li>
+            </ol>
+        </div>
+        <div ng-show="lecture.practices.length > 0">
+            <hr>
+            Практические задания
+            <ol>
+                <li ng-repeat="practice in lecture.practices">{{practice.task}}</li>
+            </ol>
+        </div>
+    </div>
+    <br>
+</div>

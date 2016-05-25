@@ -1,0 +1,76 @@
+<div ng-controller="SettingCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="messages" class="alert alert-{{alertStatus}}" ng-show="messages">
+                <span ng-bind="messages"></span>
+                <i class="dismiss-messages pull-right glyphicon glyphicon-remove" ng-click="messages = ''"
+                   ng-show="messages"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3><span class="glyphicon glyphicon-user">Личный кабинет</span></h3>
+
+            <form name="personForm" novalidate role="form">
+
+                <div class="col-xs-6 col-md-3">
+                    <label>Avatar<span class="required">*</span></label>
+                    <a href="#" class="thumbnail">
+                        <img ng-src="data:image/JPEG;base64,{{$scope.person.avatar}}">
+                    </a>
+                </div>
+                <div>
+                    <input type="file" id="image" name="image"/>
+                    <br>
+                    <button ng-click="addImage()">Add avatar</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя<span class="required">*</span></label>
+                    <input id="name" type="text" name="name" ng-model="person.name" class="form-control"
+                           ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Фамилия<span class="required">*</span></label>
+                    <input id="surname" type="text" name="surname" ng-model="person.lastName" class="form-control"
+                           ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="secondName">Отчество</label>
+                    <input id="secondName" type="text" name="secondName" ng-model="person.secondName"
+                           class="form-control"
+                           ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber"><span class="glyphicon glyphicon-earphone">Телефон</span><span
+                            class="required">*</span></label>
+                    <input id="phoneNumber" size="11" type="text" onchange="return phoneValidator()" name="phoneNumber"
+                           ng-model="person.description.phoneNumber" class="form-control"
+                           ng-required="true"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="graduation">Краткое описание Вашего образования</label>
+                    <textarea class="form-control" id="graduation" ng-model="person.description.graduation"
+                              placeholder="Ваше образование..." rows="4"> </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Краткое описание Вашего опыта работы</label>
+                    <textarea class="form-control" id="experience" ng-model="person.description.experience"
+                              placeholder="Ваш опыт работы..." rows="4"> </textarea>
+                </div>
+
+                <button type="button" class="btn btn-success  trench_out full_screen"
+                        ng-disabled="!isValidUser(personForm)" ng-click="updatePerson()">
+                    <span class="glyphicon glyphicon-floppy-disk">Save</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

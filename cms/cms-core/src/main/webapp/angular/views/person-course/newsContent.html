@@ -1,0 +1,22 @@
+<div>
+    <ol>
+        <div ng-show="!news.length">Новостей по данному курсу пока нет</div>
+        <li ng-repeat="new in news">
+             <div class="title-in-list">{{new.title}}</div>
+            <div class="description">{{new.content}}</div>
+            <div class="date-format">{{new.date}}</div>
+            <button ng-show="isTeacher()" class="btn pull-right"  ui-sref="person.course.addNews">
+
+                <span class="glyphicon glyphicon-pencil"></span>  Редактировать
+            </button>
+            <button ng-show="isTeacher()" class="btn pull-right"   ng-click="removeNews(new.id)">
+                <span class="glyphicon glyphicon-remove"></span>  Удалить
+            </button>
+        </li>
+    </ol>
+    </div>
+    <div class="pull-right"><br><br>
+    <button ng-show="isTeacher()" class="btn btn-default" ui-sref="person.course.addNews">Добавить новость</button>
+
+
+</div>

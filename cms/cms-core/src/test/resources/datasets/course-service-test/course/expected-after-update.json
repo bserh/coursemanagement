@@ -1,0 +1,21 @@
+{
+    "courses": [
+        {
+            "name": "OtherName",
+            "description": "Java",
+            "startdate": "2015-10-10",
+            "enddate": "2016-11-11"
+        }
+    ],
+    "person": [
+        {
+            "id": 1,
+            "email": "teacher@gmail.com",
+            "phone": "01234567891",
+            "name": "teacherName",
+            "second_name": "teacherSecondName",
+            "last_name": "teacherLastName",
+            "personRole": "TEACHER"
+        }
+    ]
+}

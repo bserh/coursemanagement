@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs nav ">
+    <li ui-sref-active="active" ng-repeat="course in courses">
+        <a ui-sref="teacher({courseId:{{course.id}}})" data-toggle="tab1">{{course.name}}</a>
+    </li>
+</ul>
+<div class="row trench">
+    <div class="col-xs-6 col-md-2">
+        <div class="sidebar-nav trench">
+            <ul class="nav nav-list">
+                <li class="nav-header"></li>
+                <li><a href="#"> Материалы по курсам </a>
+                <li><a href="#"> Студенты </a>
+                <li><a href="#"> Новости <span class="badge badge-info">4</span></a></li>
+                <li><a href="#"> Рассписание </a>
+                <li class="divider"></li>
+                <li><a href="#"><i class="icon-comment"></i> Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+    <div ui-view="content">
+    </div>
+</div>

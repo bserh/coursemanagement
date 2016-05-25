@@ -1,0 +1,28 @@
+<div>
+    <div class="col-md-8">
+        <form name="personForm" novalidate role="form">
+            <div class="form-group">
+                <label for="phoneNumber"><span class="glyphicon glyphicon-phone"></span>Телефон</label>
+                <input id="phoneNumber" size="11" type="text" ng-change="phoneValidator()" name="phoneNumber"
+                       ng-model="person.phoneNumber" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="graduation"><span class="glyphicon glyphicon-education"></span>Краткое описание Вашего образования</label>
+                <textarea class="form-control" id="graduation" ng-model="person.graduation"
+                          placeholder="Ваше образование..." rows="4"> </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="experience"><span class="glyphicon glyphicon-blackboard"></span>Краткое описание Вашего опыта работы</label>
+                <textarea class="form-control" id="experience" ng-model="person.experience"
+                          placeholder="Ваш опыт работы..." rows="4"> </textarea>
+            </div>
+
+            <button type="button" class="btn btn-success  trench_out full_screen"
+                    ng-disabled="!isValidUser(personForm)" ng-click="updatePerson()">
+                <span class="glyphicon glyphicon-floppy-disk">Save</span>
+            </button>
+        </form>
+    </div>
+</div>

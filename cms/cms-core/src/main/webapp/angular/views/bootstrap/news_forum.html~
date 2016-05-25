@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Материалы лекций</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">javatraining</a>
+    </div>
+
+    <ul class="nav nav-tabs trench"  >
+        <li class="active"><a href="#">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">О нас...</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col-xs-6 col-md-2">
+
+            <div class="sidebar-nav">
+                <ul class="nav nav-list">
+
+                    <li class="nav-header">Menu</li>
+                    <li><a href="#"> Course material </a>
+                    <li><a href="#"> Students </a>
+                    <li><a href="#"> News <span class="badge badge-info">4</span></a></li>
+                    <li><a href="#"> Schedule </a>
+
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-comment"></i> Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-10">
+            <ul class="nav nav-tabs trench"  >
+                <li class="active"><a href="#tab1" data-toggle="tab1">Java SE</a></li>
+                <li><a href="#tab2" data-toggle="tab">Java EE</a></li>
+                <li><a href="#tab3" data-toggle="tab">Android</a></li>
+                <p class="text-right">user face</p>
+            </ul>
+
+
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+
+                        <div class="navbar-header ">
+                            <ul class="nav navbar-nav ">
+                                <li class="active"><a href="#">Forum</a></li>
+                                <li><a href="#">Practical</a></li>
+                                <li><a href="#">Schedule</a></li>
+                            </ul>
+                        </div>
+
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <input type="text">
+                </div>
+
+            </div>
+            <hr />
+Forum
+            <a href="#">link to question</a>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>

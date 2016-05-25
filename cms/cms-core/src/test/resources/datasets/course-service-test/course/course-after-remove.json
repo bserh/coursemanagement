@@ -1,0 +1,18 @@
+{
+    "courses": [],
+    "person": [
+        {
+            "id": 1,
+            "email": "teacher@gmail.com",
+            "phone": "01234567891",
+            "name": "teacherName",
+            "second_name": "teacherSecondName",
+            "last_name": "teacherLastName",
+            "personRole": "TEACHER"
+        }
+
+    ],
+    "news": []
+
+
+}

@@ -1,0 +1,65 @@
+<div class="person-course-add-files">
+    <div>
+        <table class="table person-course-file" ng-show="uploader.queue.length>0">
+            <thead>
+            <tr>
+                <th class="col-md-1 text-center">N</th>
+                <th class="col-md-2 text-left">Название</th>
+                <th class="col-md-2 text-center" ng-show="uploader.isHTML5">Размер</th>
+                <th class="col-md-1 text-center">Статус</th>
+                <th class="col-md-4 text-right">Дополнительно</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in uploader.queue">
+                <td class="text-center">{{ $index+1 }}</td>
+                <td><strong>{{ item.file.name }}</strong></td>
+                <td ng-show="uploader.isHTML5" nowrap class="text-center">{{ item.file.size/1024/1024|number:2 }} MB
+                </td>
+                <td class="text-center">
+                    <span ng-show="item.isUploaded"><img class="img-wait-file" ng-src="angular/img/wait.gif"/></span>
+                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                </td>
+                <td nowrap class="text-right">
+                    <button type="button" class="btn btn-success btn-xs person-course-add-files-xs-btn"
+                            ng-click="item.upload()"
+                            ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                        <span class="glyphicon glyphicon-upload"></span> Загрузить
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs person-course-add-files-xs-btn"
+                            ng-click="item.remove()">
+                        <span class="glyphicon glyphicon-trash"></span> Удалить
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">
+                    <span class="glyphicon glyphicon-plus btn-file">
+                        <input type="file" nv-file-select="" uploader="uploader" multiple/>
+                    </span>
+                </td>
+                <td></td>
+                <td colspan="2"></td>
+                <td nowrap class="text-right">
+                    <button type="button" class="btn btn-success btn-xs person-course-add-files-xs-btn"
+                            ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
+                        <span class="glyphicon glyphicon-upload"></span> Загрузить все
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs person-course-add-files-xs-btn"
+                            ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
+                        <span class="glyphicon glyphicon-trash"></span> Удалить все
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div ng-show="uploader.queue.length==0" class="btn-file-container">
+            <span class="btn btn-success btn-xs btn-file">Выбрать файлы
+                <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
+            </span>
+        </div>
+
+    </div>
+</div>

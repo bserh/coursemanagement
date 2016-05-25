@@ -1,0 +1,32 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "name": "courseName",
+            "description": "courseDescription",
+            "startdate": "2014-01-10",
+            "enddate": "2015-07-31"
+        }
+    ],
+    "lesson": [
+        {
+            "id": 1,
+            "type": 0,
+            "order_num": 1,
+            "topic": "lessonTopic",
+            "description": "lessonDescription",
+            "date": "2014-10-01",
+            "course_id": 1
+        }
+    ],
+    "practice_lesson": [
+        {
+            "task": "practiceTask",
+            "lesson_id": 1
+        },
+        {
+            "task": "otherPracticeTask",
+            "lesson_id": 1
+        }
+    ]
+}

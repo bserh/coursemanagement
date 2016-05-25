@@ -1,0 +1,37 @@
+<div class="person-course-add-practices">
+    <div>
+        <table class="table person-course-practice">
+            <tbody>
+            <tr ng-repeat="practice in lecture.practices | orderBy : 'orderNum'">
+                <td class="col-md-1">
+                    <input type="text" ng-model="lecture.practices[$index].orderNum" class="text-center">
+                </td>
+                <td class="col-md-7"><textarea ng-model="lecture.practices[$index].task"
+                                               class=""></textarea>
+                </td>
+                <td nowrap class=" col-md-2 text-right">
+                    <button type="button" class="btn btn-danger btn-xs person-course-add-files-xs-one-btn"
+                            ng-click="removePractice(practice)">
+                        <span class="glyphicon glyphicon-trash"></span> Удалить
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-1">
+                    <input type="text" ng-model="newPractice.orderNum"
+                           class="text-center">
+                </td>
+                <td  class="col-md-7">
+                    <textarea ng-model="newPractice.task" class=""></textarea>
+                </td>
+                <td class="col-md-2 vert-align-middle text-right">
+                    <button type="button" class="btn btn-success btn-xs person-course-add-files-xs-one-btn"
+                            ng-click="addPractice()">
+                        <span class="glyphicon glyphicon-plus"></span> Добавить
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

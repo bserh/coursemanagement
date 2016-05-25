@@ -1,0 +1,47 @@
+<div>
+    <div class="pull-right">
+        <label class="form-group">
+            <input type="checkbox" ng-model="hideProcessed" ng-change="showHideProcessed()">
+            <span>скрыть обработанные заявки</span>
+        </label>
+        <br>
+        <label class="form-group pull-right">
+            <input type="text" ng-model="search" class="form-control input-sm" placeholder="Найти по фамилии"
+                   ng-change="searchNames()">
+        </label>
+    </div>
+
+    <form class="students">
+        <table class="table table-hover table-bordered table-condensed">
+            <thead>
+            <tr>
+                <td class="text-center">#</td>
+                <td>Имя</td>
+                <td>Статус заявки</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="person in subscribers.slice(((currentPage-1)*maxPersonsPerPage), ((currentPage)*maxPersonsPerPage)) track by $index |
+            orderBy : 'personLastName' ">
+                <td  class="text-center"> {{(currentPage-1)*maxPersonsPerPage + $index + 1}}</td>
+                <td>{{person.personLastName + " " + person.personFirstName }}</td>
+                <td>
+                    <select id="personStatus"
+                            ng-model="person.courseStatus"
+                            ng-options="getLabelForStatus(status) for status in availableStatuses"
+                            class="form-control input-sm">
+                    </select>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <pagination previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                    total-items="subscribers.length" ng-model="currentPage" items-per-page="maxPersonsPerPage"
+                    num-pages="numPages" class="pagination-students" boundary-links="true"
+                    rotate="false">
+        </pagination>
+        <button type="button" class="btn btn-default btn-s pull-right"
+                ng-click="updateStatuses()">Обновить статусы
+        </button>
+    </form>
+</div>

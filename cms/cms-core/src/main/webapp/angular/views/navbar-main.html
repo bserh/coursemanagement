@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" id="navbar-main">
+    <div class="container content">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target=".navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Java Training</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a ui-sref="news">Новости</a></li>
+                <li><a ui-sref="about">О нас</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right avatar">
+                <li ng-hide="isLogin()"><a class="person-login" ng-click="doLogin()">Войти</a></li>
+                <li ng-if="isLogin()" class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span gravatar name="{{getUsername()}}" width="32" hash="{{getEmailHash()}}"></span>
+                        <span>{{getUsername()}}</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="person.settings">Личная информация</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" ng-click="doLogOut()">Выйти</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

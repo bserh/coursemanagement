@@ -1,0 +1,22 @@
+<div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Your Phone Number</h3>
+        </div>
+        <div class="modal-body">
+            <form name="subscriberForm" novalidate role="form">
+                <div class="form-group">
+                    <label for="phoneNumber">Введите номер телефона<span class="required">*</span></label>
+                    <input id="phoneNumber" size="11" type="text" name="phoneNumber" ng-model="person.phoneNumber"
+                           class="form-control" onchange="phoneValidator()" ng-change="phoneValidator()"
+                           ng-required="true"/>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()" ng-disabled="!isPersonHasPhoneNumber()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</div>
+

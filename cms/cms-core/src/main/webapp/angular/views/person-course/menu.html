@@ -1,0 +1,22 @@
+<ul id="person-menu">
+    <li class="active" ui-sref-active="active"><a ui-sref="person.course.content">
+        <span class="fa fa-book icon"></span>
+        <span class="item">Учебные материалы</span></a></li>
+    <li ui-sref-active="active"><a ui-sref="{{progressState}}">
+        <span class="fa fa-users icon"></span>
+        <span class="item">{{progressLabel}}</span></a></li>
+    <li ui-sref-active="active"><a ui-sref="person.course.newsContent">
+        <span class="fa fa-newspaper-o icon"></span>
+        <span class="item">Новости</span></a></li>
+    <li ui-sref-active="active" ng-show="isTeacher()"><a ui-sref="person.course.edit">
+        <span class="fa fa-pencil-square-o icon"></span>
+        <span class="item">Редактирование</span></a></li>
+    <li ui-sref-active="active"><a ui-sref="person.course.calendar">
+        <span class="fa fa-calendar icon"></span>
+        <span class="item">Календарь</span></a></li>
+    <li ui-sref-active="active" ng-show="isTeacher()"><a ui-sref="person.course.notification">
+        <span class="fa fa-envelope-o icon"></span>
+        <span class="item"></span>Notification</a></span></li>
+    <li ui-sref-active="active" ng-show="isTeacher()"><span class="social social-github"><a ui-sref="person.course.gitlab">
+        Gitlab</a></span></li>
+</ul>

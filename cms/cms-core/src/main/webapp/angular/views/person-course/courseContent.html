@@ -1,0 +1,41 @@
+<div>
+    <div ng-show="lectures.length > 0" class="pull-right">
+        <label class="person-course-hide-practices">
+            <input type="checkbox" ng-model="hidePractices">
+            <span>скрыть задания</span>
+        </label>
+        <br>
+        <label ng-show="isTeacher()" class="person-course-hide-practices">
+            <input type="checkbox" ng-model="editMode">
+            <span>режим редактирования</span>
+        </label>
+    </div>
+    <ol class="lecture-with-practice">
+        <li ng-repeat="lecture in lectures | orderBy : 'orderNum' ">
+            <div class="lecture">
+                <a ui-sref="person.course.lecture({lectureId:lecture.orderNum})">{{lecture.topic}}</a>
+            </div>
+            <div ng-show="editMode" class="lecture-actions">
+                <button class="btn btn-danger btn-xs"
+                        ng-click="removeLecture(lecture.orderNum)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+                <button class="btn btn-success btn-xs action-update"
+                        ui-sref="person.course.editLecture({lectureOrderNum: lecture.orderNum})">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </button>
+            </div>
+            <ol ng-hide="hidePractices" class="lecture-with-practice">
+                <li ng-repeat="practice in lecture.practices | orderBy : 'orderNum' ">
+                    {{practice.task}}
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <div ng-show="isTeacher()" class="pull-right">
+        <button class="btn btn-default btn-xs"
+                ui-sref="person.course.addLecture({lectureOrderNum:lectures.length+1})">
+            Добавить лекцию
+        </button>
+    </div>
+</div>

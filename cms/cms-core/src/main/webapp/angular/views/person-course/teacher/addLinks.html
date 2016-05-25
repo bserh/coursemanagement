@@ -1,0 +1,45 @@
+<div class="person-course-add-files">
+    <div>
+        <table class="table person-course-link">
+            <thead>
+            <tr>
+                <th class="col-md-1 text-center">N</th>
+                <th class="col-md-5 text-left">Название</th>
+                <th class="col-md-2 text-left">Ссылка</th>
+                <th class="col-md-2 text-right">Действия</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="lectLink in lecture.links" class="vert-align-middle">
+                <td class="vert-align-middle"><input type="text" ng-model="lecture.links[$index].orderNum"
+                           class="person-add-files-input text-center"></td>
+                <td><input type="text" ng-model="lecture.links[$index].description" class="person-add-files-input"></td>
+                <td class="text-left"><a target="_blank" href="{{ lectLink.link }}">перейти</a></td>
+                <td nowrap class="text-right">
+                    <button type="button" class="btn btn-danger btn-xs person-course-add-files-xs-one-btn"
+                            ng-click="removeLink(lectLink)">
+                        <span class="glyphicon glyphicon-trash"></span> Удалить
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="vert-align-middle">
+                    <input type="text" ng-model="newLink.orderNum" class="person-add-files-input text-center">
+                </td>
+                <td>
+                    <input type="text" ng-model="newLink.description" class="person-add-files-input">
+                </td>
+                <td class="vert-align-middle">
+                    <input type="text" ng-model="newLink.link" class="person-add-files-input">
+                </td>
+                <td class="vert-align-middle text-right">
+                    <button type="button" class="btn btn-success btn-xs person-course-add-files-xs-one-btn"
+                            ng-click="addLink()">
+                        <span class="glyphicon glyphicon-plus"></span> Добавить
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

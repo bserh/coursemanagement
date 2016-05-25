@@ -1,0 +1,33 @@
+<h1>Новости</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<div ng-show="!news.length">Новостей пока нет</div>
+
+<div  ng-repeat="new in news">
+
+     <div ui-sref="person.course({courseId:new.courseId})"
+       class="list-group-item">
+        <div class="news-title">{{new.title}}</div>
+
+        <div class="description">{{new.content}}</div>
+        <p class="date-format">{{new.date}}</p>
+
+    </div>
+    <div class="course-action course-teacher-footer">
+        <button ng-show="isTeacher()" class="btn btn-primary pull-right"  ui-sref="person.course({courseId:new.courseId})">
+            <span class="glyphicon glyphicon-pencil"></span>  Редактировать
+        </button>
+        <button ng-show="isTeacher()" class="btn btn-primary btn pull-right"   ng-click="removeNews(new.id)">
+            <span class="glyphicon glyphicon-remove"></span>  Удалить
+        </button>
+    </div>
+
+</div>
+
+

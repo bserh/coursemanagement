@@ -1,0 +1,85 @@
+<div>
+    <div class="row">
+        <h3 ng-show="isAddMode()">Добавление нового курса</h3>
+
+        <form name="courseForm" novalidate role="form">
+
+            <div ng-show="isAddMode()" class="form-group">
+                <label for="prototypes"> Создать на основе</label>
+                <select id="prototypes"
+                        ng-click="setFieldsAsInPrototype()"
+                        ng-model="coursePrototypeId"
+                        ng-options="course.id as course.name for course in coursePrototypes | orderBy:'id' "
+                        class="form-control">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Название <span class="required">*</span></label>
+                <input id="name" type="text" name="name" ng-model="course.name" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Краткое описание<span class="required">*</span></label>
+                    <textarea class="form-control" id="content" ng-model="course.description"
+                              placeholder="Введите описание..." rows="4"> </textarea>
+            </div>
+
+            <div ng-show="isAddMode()" class="form-group">
+                <label for="teachers"> Преподаватели курса<span class="required">*</span></label>
+                <select id="teachers"
+                        ng-model="courseTeachers"
+                        ng-options="teacher.id as teacher.name+' '+teacher.lastName for teacher in teachers"
+                        class="form-control" multiple>
+                </select>
+            </div>
+
+            <div class="form-group" ng-controller="DatepickerCtrl">
+                <label for="startDate">Начало курса<span class="required">*</span></label>
+
+                <p class="input-group">
+                    <input id="startDate" name="startDate" type="text" class="form-control"
+                           datepicker-popup="{{format}}"
+                           ng-model="course.startDate" is-open="opened" ng-click="open($event)"
+                           datepicker-options="dateOptions"
+                           close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="open($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+            </div>
+
+            <div class="form-group" ng-controller="DatepickerCtrl">
+                <label for="endDate">Окончание курса<span class="required">*</span></label>
+                    <span class="label label-danger"
+                          ng-show="!isValidDates()">Дата окончания должна быть не раньше даты начала!</span>
+
+                <p class="input-group">
+                    <input id="endDate" type="text" class="form-control" datepicker-popup="{{format}}"
+                           ng-model="course.endDate" is-open="opened" ng-click="open($event)"
+                           datepicker-options="dateOptions"
+                           close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="open($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+            </div>
+
+            <label><span class="required">* - обязательные поля</span></label>
+
+            <div class="pull-right">
+                <button type="button" class="btn btn-success btn-s"
+                        ng-disabled="!isValidCourse()"
+                        ng-click="isAddMode() ? createCourse() : updateCourse()">{{okLabel}}
+                </button>
+                <button type="button" class="btn btn-danger btn-s"
+                        ng-click="cancel()">Отмена
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

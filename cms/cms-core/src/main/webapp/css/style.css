@@ -1,0 +1,504 @@
+/********************* Color reference chart ****************
+*************************** comment ********* color ********
+
+warning-color              warn-col          #cd0200
+warning-color-light     warn-col-light       #ba0000
+warning-color-border    warn-col-border      #730000
+ok-color                   ok-col            #374e0c
+button-text-color          btn-txt-col       #ffffff
+*/
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.sign-in {
+    float: right;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.info-list {
+    font-size: 20px;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.info-list .description {
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+.description {
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+.title-in-list {
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.date-format {
+    text-align: right;
+    color: #9c9c9c;
+}
+
+.news-title {
+    text-align: left;
+    color: #0000FF;
+    font-size: 20px;
+
+}
+
+h1 {
+    padding-bottom: 25px;
+    border-bottom: solid lavender 2px;
+}
+
+.info-list .course-action {
+    font-size: 16px;
+    text-align: right;
+}
+
+.info-list .course-action-anchor {
+    font-size: 16px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.course-edit-header {
+    display: table;
+    width: 100%;
+}
+
+.course-edit-header .title {
+    display: table-cell;
+    text-align: left;
+}
+
+.course-edit-header .date {
+    display: table-cell;
+    text-align: right;
+}
+
+.course-edit-header .remove-action {
+    display: table-cell;
+    text-align: right;
+    cursor: pointer;
+    color: #cd0200; /*warn-col*/
+}
+
+.course-teacher-footer {
+    display: table;
+    width: 100%;
+}
+
+.course-teacher-footer .date {
+    display: table-cell;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.course-teacher-footer .action {
+    display: table-cell;
+    text-align: right;
+}
+
+.person-course-hide-practices {
+    margin: 0;
+}
+
+.person-course-hide-practices > span,
+.person-course-hide-practices > input[type="checkbox"] {
+    vertical-align: middle;
+    margin: 0;
+}
+
+#lecture-content-header {
+    width: 100%;
+    cursor: pointer;
+}
+
+#lecture-content-header > div.left {
+    float: left;
+    width: 33%;
+    text-align: left;
+}
+
+#lecture-content-header > div.center {
+    margin: 0 auto;
+    width: 33%;
+    text-align: center;
+}
+
+#lecture-content-header > div.right {
+    float: right;
+    width: 33%;
+    text-align: right;
+}
+
+#lecture-content {
+}
+
+#lecture-content > div.title {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin: 20px auto 20px auto;
+}
+
+#lecture-content > div.content {
+    margin: 10px 0 0 0;
+}
+
+.info-list .enroll-into-course {
+    color: #cd0200; /*warn-col*/
+}
+
+.info-list .remove-course {
+    color: #cd0200; /*warn-col*/
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.info-list .go-into-course {
+    color: #374e0c; /*ok-col*/
+}
+
+.required {
+    color: #cd0200; /*warn-col*/
+}
+
+.dismiss-messages {
+    cursor: pointer;
+}
+
+.person-login {
+    cursor: pointer;
+}
+
+.person-course-file {
+    table-layout: fixed;
+}
+
+.person-course-file tbody tr td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img-wait {
+    width: 64px;
+    height: 64px;
+}
+
+.img-wait-file {
+    width: 24px;
+    height: 24px;
+}
+
+.person-menubar {
+    border-right: solid lavender 2px;
+}
+
+.person-course-content {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.person-main-top {
+    border-bottom: solid lavender 2px;
+}
+
+.person-main-top .title {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.setting-menubar {
+    border-right: solid lavender 2px;
+}
+
+.setting-course-content {
+    padding-left: 20px;
+}
+
+.setting-main-top {
+    border-bottom: solid lavender 2px;
+}
+
+ul#person-menu {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+ul#person-menu > li {
+    padding: 10px 0 10px 0;
+}
+
+ul#person-menu > li > a {
+    vertical-align: bottom;
+}
+
+ul#person-menu > li > a > span.icon {
+    min-width: 20px;
+    padding-right: 5px;
+}
+
+ul#person-menu > li > a > span.item {
+}
+
+ul#person-menu > li.active > a,
+ul#person-menu > li.active > a:hover,
+ul#person-menu > li.active > a:focus {
+    color: darkblue;
+    font-weight: bolder;
+}
+
+ul#setting-menu > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul#setting-menu * {
+    vertical-align: top;
+}
+
+ul#setting-menu {
+    list-style-type: none;
+}
+
+ul#setting-menu > li.active > a,
+ul#setting-menu > li.active > a:hover,
+ul#setting-menu > li.active > a:focus {
+    color: darkblue;
+    font-weight: bolder;
+}
+
+/*Nested list for lecture with practices*/
+ol.lecture-with-practice {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+ol.lecture-with-practice > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+    width: 100%;
+}
+
+ol.lecture-with-practice > li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;
+    width: 30px;
+}
+
+li ol > li {
+    margin: 0;
+}
+
+li ol > li:before {
+    content: counters(item, ".") ". ";
+}
+
+/**/
+
+.lecture-with-practice .lecture {
+    display: inline-block;
+    min-width: 30%;
+}
+
+.lecture-with-practice .lecture-actions {
+    display: inline-block;
+}
+
+.lecture-with-practice .lecture-actions .action-remove {
+    color: #cd0200; /*warn-col*/;
+}
+
+.lecture-with-practice .lecture-actions .action-update {
+    color: #374e0c; /*ok-col*/
+}
+
+.btn-add-course-as-proto {
+    display: inline-block;
+}
+
+.add-course-div-btn-proto {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.person-course-add-files,
+.person-course-add-practices {
+    outline: solid lavender 1px;
+    padding: 5px;
+}
+
+.person-course-add-files-xs-btn {
+    width: 45%;
+}
+
+.person-course-add-files-xs-one-btn {
+    width: 90%;
+}
+
+.person-course-link,
+.person-course-link > tbody > tr > td,
+.person-course-practice,
+.person-course-practice > tbody > tr > td {
+}
+
+.person-course-link > tbody > tr > td.vert-align-middle {
+    vertical-align: middle;
+}
+
+.person-add-files-input {
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.person-course-practice > tbody > tr > td > textarea {
+    width: 98%;
+    padding: 1%;
+    resize: vertical;
+}
+
+.person-course-practice > tbody > tr > td > input {
+    width: 98%;
+    padding: 1%;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file-container {
+    text-align: right;
+    padding: 8px;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.person-menu-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.content {
+    margin: 54px 50px 0 50px;
+}
+
+.content .row {
+    margin: auto 0 auto 0;
+}
+
+#navbar-main > div.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2px;
+}
+
+.avatar {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.avatar > li > a:link.dropdown-toggle,
+.avatar > li > a:visited.dropdown-toggle,
+.avatar > li > a:hover.dropdown-toggle,
+.avatar > li > a:active.dropdown-toggle {
+    height: 50px;
+    padding: 13px 15px 5px 15px;
+}
+
+#userinfo-wrapper {
+    float: none;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.trench {
+    padding: 10px;
+    margin: 5px;
+}
+
+.trench_out {
+    margin: 5px;
+
+}
+
+.third_screen {
+    width: 30%;
+}
+
+.half_screen {
+    width: 50%;
+}
+
+.full_screen {
+    width: 100%;
+}
+
+.vcenter {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+#git-id {
+    padding-top: 45px;
+}
+
+.circular {
+    border-radius: 99%;
+    -webkit-border-radius: 99%;
+    -moz-border-radius: 99%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+}
+
+.students .pagination-students {
+    margin-top: 0;
+}
+
+.students > .table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.students > .table >  tbody > tr > td > input[type="number"] {
+    padding: 0;
+    height: auto;
+}

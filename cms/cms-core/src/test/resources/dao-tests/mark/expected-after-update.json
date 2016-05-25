@@ -1,0 +1,48 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "name": "courseName",
+            "description": "courseDescription",
+            "startdate": "2014-01-10",
+            "enddate": "2015-07-31"
+        }
+    ],
+    "lesson": [
+        {
+            "id": 1,
+            "type": 0,
+            "order_num": 1,
+            "topic": "lessonTopic",
+            "description": "lessonDescription",
+            "date": "2014-10-01",
+            "course_id": 1
+        }
+    ],
+    "person": [
+        {
+            "id": 1,
+            "phone": "01234567891",
+            "email": "teacher@gmail.com",
+            "name": "teacherName",
+            "second_name": "teacherSecondName",
+            "last_name": "teacherLastName",
+            "personRole": "TEACHER"
+        }
+    ],
+    "practice_lesson": [
+        {
+            "id": 1,
+            "task": "practiceTask",
+            "lesson_id": 1
+        }
+    ],
+    "mark": [
+        {
+            "mark": 85,
+            "lesson_id": 1,
+            "person_id": 1
+        }
+
+    ]
+}

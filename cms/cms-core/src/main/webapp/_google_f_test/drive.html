@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Drive tests</title>
+</head>
+<body>
+<form action="../drive" method="get">
+    <input type="hidden" name="_method" value="get">
+    <button type="submit">Get list</button>
+</form>
+<form action="../drive" method="get">
+    <input type="hidden" name="_method" value="delete_files">
+    <button type="submit">Delete all files</button>
+</form>
+<form action="../drive" method="get">
+    <input type="hidden" name="_method" value="delete_permissions">
+    <input type="email" name="email" value="dorogan.olga.test@gmail.com">
+    <button type="submit">Remove owner from files</button>
+</form>
+<form action="../drive" method="post">
+    <input type="email" name="email" value="dorogan.olga.test@gmail.com">
+    <button type="submit">Add owner to folder</button>
+</form>
+
+<h1>For REST service</h1>
+
+<form action="../ui/file/upload" method="post" enctype="multipart/form-data">
+    <p>
+        Select a file : <input type="file" name="file" size="45"/>
+    </p>
+    <input type="submit" value="Upload It"/>
+</form>
+</body>
+</html>

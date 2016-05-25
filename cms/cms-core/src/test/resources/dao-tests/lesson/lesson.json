@@ -1,0 +1,22 @@
+{
+    "lesson": [
+        {
+            "id": 1,
+            "type": 1,
+            "order_num": 234,
+            "topic": "topic",
+            "description": "Other description",
+            "date": "2016-08-11",
+            "course_id": 1
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "courseName",
+            "description": "courseDescription",
+            "startdate": "2015-11-11",
+            "enddate": "2016-11-11"
+        }
+    ]
+}

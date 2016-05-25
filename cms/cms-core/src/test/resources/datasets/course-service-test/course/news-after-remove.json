@@ -1,0 +1,23 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "name": "courseName",
+            "description": "courseDescription",
+            "startdate": "2014-01-10",
+            "enddate": "2015-07-31"
+        }
+    ],
+    "news": [],
+    "person": [
+        {
+            "id": 1,
+            "email": "teacher@gmail.com",
+            "phone": "01234567891",
+            "name": "teacherName",
+            "second_name": "teacherSecondName",
+            "last_name": "teacherLastName",
+            "personRole": "TEACHER"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation=" http://jboss.org/schema/arquillian http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <container qualifier="wildfly-managed" default="false">
+        <configuration>
+            <property name="serverConfig">standalone.xml</property>
+            <property name="outputToConsole">true</property>
+
+            <property name="javaVmArguments">-Djboss.socket.binding.port-offset=100</property>
+            <property name="managementPort">10090</property>
+        </configuration>
+    </container>
+
+</arquillian>

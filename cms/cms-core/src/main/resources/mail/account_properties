@@ -1,0 +1,9 @@
+{
+  "email_for_notification": "codedealerb@gmail.com",
+  "password_for_notification": "",//insert pass here
+  "email_for_gitlab_notification": "",
+  "password_for_gitlab_notification": "",//insert pass here
+  "account_for_sms_notification": "soapgateway",
+  "password_for_sms_notification": "",//insert pass here
+  "account_phone_number": "380934110628"
+}

@@ -1,0 +1,19 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Контактные данные</h3>
+    </div>
+    <div class="modal-body">
+        <form name="phoneForm">
+            <label for="phoneNumber">Ваш номер телефона:</label>
+            <input id="phoneNumber" type="text"
+                   ng-pattern="/\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/"
+                   name="phoneNumber" placeholder="(050) XXX-XX-XX"
+                   title="Формат ввода (050) XXX-XX-XX" required
+                   ng-model="person.phone"/>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()" ng-disabled="!phoneForm.phoneNumber.$valid">OK</button>
+        <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+    </div>
+</div>
